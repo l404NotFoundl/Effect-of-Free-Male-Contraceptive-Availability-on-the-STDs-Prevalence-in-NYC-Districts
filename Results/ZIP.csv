@@ -1,0 +1,11 @@
+﻿PID,MRN,Gender,Race,Age,Address,ZIPcode,Latitude,Longitude,"Accuracy Score","Accuracy Type",Number,Street,"Unit Type","Unit Number",City,State,County,Zip,Country,Source
+1001,57011,Male,White,25,"2425 Grand Avenue",10468,40.862429,-73.90368,1,rooftop,2425,"Grand Ave",,,Bronx,NY,"Bronx County",10468,US,"City of New York"
+1002,57012,Female,Asian,37,"601 E 20th St",10010,40.733233,-73.975051,1,rooftop,601,"E 20th St",,,"New York",NY,"New York County",10010,US,"City of New York"
+1003,57013,Female,Black,23,"2830 Jackson Ave",11101,40.7486,-73.937793,1,rooftop,28-30,"Jackson Ave",,,"Long Island City",NY,"Queens County",11101,US,"City of New York"
+1004,57014,Male,Black,19,"310 W 55th St",10019,40.765563,-73.984416,1,rooftop,310,"W 55th St",,,"New York",NY,"New York County",10019,US,"City of New York"
+1005,57015,Female,White,22,"179 E 93rd St",10128,40.783685,-73.951485,1,rooftop,179,"E 93rd St",,,"New York",NY,"New York County",10128,US,"City of New York"
+1006,57016,Male,Hispanic,31,"2642 Broadway",10025,40.798664,-73.967778,0.38,place,,,,,"New York",NY,"New York County",10025,US,"TIGER/Line® dataset from the US Census Bureau"
+1007,57017,Female,Asian,52,"327 E 116th St",10029,40.79688,-73.937233,1,range_interpolation,327,"E 116th St",,,"New York",NY,"New York County",10029,US,"TIGER/Line® dataset from the US Census Bureau"
+1008,57018,Male,Black,44,"456 Main St",10044,40.759299,-73.952166,0.9,nearest_rooftop_match,455,"Main St",,,"New York",NY,"New York County",10044,US,"City of New York"
+1009,57019,Male,White,28,"171 Wyckoff St",11217,40.684789,-73.987292,1,rooftop,171,"Wyckoff St",,,Brooklyn,NY,"Kings County",11217,US,"City of New York"
+1010,57020,Female,Hispanic,33,"443 Greene Ave",11216,40.688298,-73.953215,1,rooftop,443,"Greene Ave",,,Brooklyn,NY,"Kings County",11216,US,"City of New York"
