@@ -10,8 +10,16 @@
 ## Introduction
 
 
-## Method
+## Methodology
 
+### Constructing the OMOP Tables
+
+### Creating Sample Patient Table
+### ETL Process of the Public Data Source
+### Creating Table_1
+### Analysis on Fake Data
+### Analysis on Real Data
+### Comparing the Results
 
 ## Result
 
