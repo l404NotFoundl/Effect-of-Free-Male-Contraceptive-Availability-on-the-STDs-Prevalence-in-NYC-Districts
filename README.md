@@ -3,9 +3,11 @@
 
 
 # Effect of Free Male Contraceptive Availability on the HIV Prevalence in NYC Districts
+
 ###### Author: Abdullah Altamammi; Jing Gao; Nathanael George
 ###### Database Management Final Project
 ###### Create Date: 07/22/2022
+
 > Table of content:
 - [Introduction](#introduction)
 - [Methodology](#methodology)
@@ -24,25 +26,21 @@
 - [Reference](#reference)
 
 
-## Introduction
-Outline:
-* Effect of free male contraceptive availability on the prevalence of  HIV in NYC
-* Fake and Real - Population
-	*	Fake Data -  NYC residents who have done HIV tests
-	* Real Data - NYC residents who have done HIV tests and are 13 years or older
-* NYC’s public health department provides free condoms throughout NYC and its boroughs
-* Planned parenthoods in the city also provide contraceptives
-* Other private institutions also provide male contraceptives such as the male contraceptive project
-* By providing access to contraceptives, there is a reduction in pregnancies and STD (Sexually Transmitted Diseases)
-* Reduction of unwanted pregnancies and STDs in the community will reduce future healthcare costs
-
-Formal:
+## **Introduction**
+----
 
 Over the past 6 years, the New York Department of Health and Mental Hygiene (NYC DOHMH) had been actively monitoring the NYC Condom Availability Program and collecting the data from different sources. This program was designed to provide free male condoms and other sexually related products to the public, such as female condoms, lubricant, etc. Not only the NYC DOHMH wanted to know the effect of distributing free male contraceptives on the prevalence of Sexually Transmitted Diseases (STDs) in the city, they also wanted to use the analytic methods to further understand the advantage and drawbacks of delivering free condoms to the public and alter the related public health policies based on the analysis results.
 
 Aside from the government agencies, there were other private institutions who also provided male contraceptives, like the Male Contraceptive Project. By providing free access to contraceptives, the NYC DOHMH and other related research facilities were expecting a reduction in the unwanted pregnancies and STDs in the community and as a result reducing the future healthcare costs.
 
-## Methodology
+To further analyze the influence of having free available contraceptives in the communities in different district in the New York City and their correlation with the prevalence of HIV, our research team raised the research question: How does the availability of free contraceptives in NYC affect HIV rates in the respective communities?
+
+In our project, we extracted 3 relavant public available datasets from NYC OpenData ('https://opendata.cityofnewyork.us/'). These datasets include "**NYC Condom Availability Program - HIV condom distribution locations**", "**DOHMH HIV/AIDS Annual Report**", and fianlly the "**HIV Testing Locations**". The "NYC Condom Availability Program" contains a list of over 325 venues across the five boroughs in NYC that actively distribute free safer sex products. The creation and maintenance of the online dataset is supported by the NYC Department of Health and Mental Hygiene. This dataset also covers some geographic information on those locations, like open hours, address, zipcode, coordinates, etc. The "DOHMH HIV/AIDS Annual Report" contains data reported to the HIV Epidemiology and Field Services Program. It includes some information like HIV diagnosis rates by borough in NYC, HIV diagnosis rates by gender, HIV diagnosis rates by age and race, etc. The "HIV Testing Locations" has the location and facility information for places in New York City that provide HIV testing. In this dataset, the Site ID, Site name, hours of operation and agencies are listed separately.
+
+In addition to the real public data source, we also created some fake HIV patients' data that can be used as a reference to compare the result. The fake datasets were built using the Microsoft SQL Server 2018. The fake datasets follows the OMOP Common Data Model framework. The fake datasets will be connected with the 3 real datasets  from NYC Open Data to analyze the relationship between the fake patients' HIV status and the availability of the free male condoms in the area and district. To better visualize the condom distribution density in the NYC, we also built the heat maps and marker maps using the Google Geocoding API.  
+
+## **Methodology**
+----
 
 ### Constructing the OMOP Tables
 
@@ -78,15 +76,15 @@ Aside from the government agencies, there were other private institutions who al
 ### Comparing the Results
 
 
-## Result
+## **Result**
 
 
-## Discussion
+## **Discussion**
 ### Limitation
 ### Improvement
 
 
-## Conclusion
+## **Conclusion**
 
 
-## Reference
+## **Reference**
