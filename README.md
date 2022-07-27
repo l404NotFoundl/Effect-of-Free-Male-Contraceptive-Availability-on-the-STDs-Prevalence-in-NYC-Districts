@@ -25,6 +25,20 @@
 
 
 ## Introduction
+Outline:
+* Effect of free male contraceptive availability on the prevalence of  HIV in NYC
+* Fake and Real - Population
+	*	Fake Data -  NYC residents who have done HIV tests
+	* Real Data - NYC residents who have done HIV tests and are 13 years or older
+* NYC’s public health department provides free condoms throughout NYC and its boroughs
+* Planned parenthoods in the city also provide contraceptives
+* Other private institutions also provide male contraceptives such as the male contraceptive project
+* By providing access to contraceptives, there is a reduction in pregnancies and STD (Sexually Transmitted Diseases)
+* Reduction of unwanted pregnancies and STDs in the community will reduce future healthcare costs
+
+Formal:
+
+Over the past 6 years, the New York Department of Health and Mental Hygiene (NYC DOHMH) had been actively monitoring the NYC Condom Availability Program and collecting the data from different sources. This program was designed to provide free male condoms and other sexually related products to the public, such as female condoms, lubricant, etc. Not only the NYC DOHMH wanted to know the effect of distributing free male contraceptives on the prevalence of Sexually Transmitted Diseases (STDs) in the city, they also wanted to use the analytic methods to further understand the advantage and drawbacks of delivering free condoms to the public and alter the related public health policies based on the analysis results.
 
 
 ## Methodology
