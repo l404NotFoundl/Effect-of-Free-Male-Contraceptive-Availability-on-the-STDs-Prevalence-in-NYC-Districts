@@ -19,6 +19,8 @@
   * [Analysis on Real Data](#analysis-on-real-data)
   * [Comparing the Results](#comparing-the-results)
 - [Result](#result)
+  * [Analysis Result](#analysis-result)
+  * [Google Platform Geocoding API](#google-platform-geocoding-api)
 - [Discussion](#discussion)
   * [Limitation](#limitation)
   * [Improvement](#improvement)
@@ -236,6 +238,8 @@ In addition, the research team will also build the Heat Map visualization on con
 
 ## **Result**
 
+### Analysis Results
+
 By analyzing our real datasets, we found out the number of condom distribution centers that have free male condoms in each borough. This information is stored in the temporary table "Condom_by_Borough". To better visualize the data, the research team created a bar chart addressing this table. As shown in the bar chart below, the Bronx borough has 125 condom distribution centers with free available male condoms. The Brooklyn has 216 of them, and Manhattan has the highest number of condom distribution centers with 244 in the area. The Queens borough has 107 of distribution centers, and the Staten Island has the lowest number of distribution centers with only 10 in the area.
 
 ![Number of Condom Distribution Centers Per Borough](https://user-images.githubusercontent.com/70513470/181414590-e36abd76-9216-485a-bd85-197b1b379f1a.png)
@@ -266,7 +270,7 @@ The following bar chart is used to examine the relationship between the HIV stat
 ![Sum of Condom Distribution Centers in certain Zipcode or Borough by HIV Status](https://user-images.githubusercontent.com/70513470/181414667-2e7ac7ec-6e19-43ac-9d8a-30f8e0a88526.png)
 (Figure 6. Sum of Condom Distribution Centers in certain Zipcode or Borough by HIV Status)
 
-### Google Platform Geocoding API:
+### Google Platform Geocoding API
 
 * [Heat Map](https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/Condom_Availability_map.html)
 
