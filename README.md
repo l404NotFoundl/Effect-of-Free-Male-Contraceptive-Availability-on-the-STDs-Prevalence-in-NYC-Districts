@@ -97,6 +97,14 @@ The resulting table includes some demographic information of each fake patient a
 
 ### ETL Process of the Public Data Source
 
+1. The 3 public datasets (real data) were downloaded from the NYC Open Data into our local directory in the csv format. The "NYC Condom Availability" dataset was created in 2018, and was updated annually until today. The "DOHMH HIV/AIDS Annual Report" dataset was created in 2016, and the most recent update was in 2018. The "HIV Testing Locations" dataset was first created in 2016, and the most recent update was in 2021.
+
+2. The public datasets (real data) were then imported into the local Microsoft SQL Server using the SQL Server Import and Export Wizard. During the importing process, we manually excluded some columns since they are not relavant to our study.
+
+3. With both real and fake datasets in the local MS SQL Server, we then linked them together using their primary or foreign keys, for example, ZIPcode, Borough, and Site ID.
+
+4. Based on the information contained in both real and fake data, the temporary tables were created. Those temp tables include: ZIPcode vs. Condom Availability, Borough vs. Condom Availability, Borough vs. Average HIV Diagnosis Rate, Borough vs. Condom Availability vs. Avg HIV Diag Rate (Note: the Condom Availability was calculated as the number of condom distribution centers with free male condoms). 
+
 ### Creating Table_1
 
 
