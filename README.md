@@ -235,6 +235,17 @@ In addition, the research team will also build the Heat Map visualization on con
 
 
 ## **Result**
+![Number of Condom Distribution Centers Per Borough](https://user-images.githubusercontent.com/70513470/181414590-e36abd76-9216-485a-bd85-197b1b379f1a.png)
+
+![Top 10 Zipcodes by Number of Condom Distribution Centers](https://user-images.githubusercontent.com/70513470/181414620-ff72a6a4-2ca1-418b-b6ed-1ed60f0323b9.png)
+
+![Free Male Condom Availability and Average HIV Diagnosis Rate by Borough](https://user-images.githubusercontent.com/70513470/181414636-7b05b29c-4541-448c-a573-139206436b1f.png)
+
+![Condom Distribution centers and Diagnosis Rate per fake patient Zipcode (Borough)](https://user-images.githubusercontent.com/70513470/181414648-ea5e4b4b-7d76-492d-9a6c-8f57cb2f0c98.png)
+
+![Sum of Condom Distribution Centers in certain Zipcode or Borough by HIV Status](https://user-images.githubusercontent.com/70513470/181414667-2e7ac7ec-6e19-43ac-9d8a-30f8e0a88526.png)
+
+
 
 * [Heat Map](https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/Condom_Availability_map.html)
 
