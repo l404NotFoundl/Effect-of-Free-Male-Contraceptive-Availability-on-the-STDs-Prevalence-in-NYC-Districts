@@ -155,7 +155,7 @@ SELECT * FROM Table_1;
 
 <center>[Table 2. Table_1]</center>
 
-* Note: Some NULL values are due to lack of data in the public datasets. The patient with PID 1008 does not have some corresponding values since the public dataset does not include zip code `10044`, even though we've already updated the Borough from "Roosevelt Island" to "Manhattan".
+> Note: Some NULL values are due to lack of data in the public datasets. The patient with PID 1008 does not have some corresponding values since the public dataset does not include zip code `10044`, even though we've already updated the Borough from "Roosevelt Island" to "Manhattan".
 
 
 ### Analysis on Fake Data
