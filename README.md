@@ -42,13 +42,18 @@ In addition to the real public data source, we also created some fake HIV patien
 
 ### Constructing the OMOP Tables
 ![image](https://user-images.githubusercontent.com/70513470/181394484-676f83d0-2622-407e-be1b-01c9ff818baf.png "ER Diagram of the OMOP Tables")
-
+(Figure 1. ER Diagram for Fake Patients)
 
 The fake database was created in the Microsoft SQL Server 2018 following the OMOP common data model framework. To have more information diversity in our study, we decided to use 5 different tables to built this relational database: **PERSON**, **Condition_occurrence**, **Visit_occurrence**, **ZIPcode**, and **Test_site**.
 
 In the **PERSON** table, we set the Patient ID (PID) as the primary key, and the Medical Record Number (MRN) as the candidate key. The ZIPcode was set as the foreign key to link with other tables in the database. We also made some fake demographic information for each patient, including the Gender, Race, Age, Address, and ZIPcode. This table provided some basic information for each patient. After creating the table in the database, we made 10 fake patients and filled in some fake values for each field in the table with no missing values.
 
-In the **Condition_occurrence** table, we set the Condition ID (CID) as the primary key and the Patient ID (PID) as the foreign key to link with the **PERSON** table. This table represents the condition that each patient have. Other than primary and foreign keys, we also included the Condition name and HIV status in this table to have a more detailed description for each condition. The Condition ID was created by referencing the ICD 10 code for 10 different HIV variants. They range from B20 to B23, including some floating numbers. 
+In the **Condition_occurrence** table, we set the Condition ID (CID) as the primary key and the Patient ID (PID) as the foreign key to link with the **PERSON** table. This table represents the condition that each fake patient has. Other than primary and foreign keys, we also included the Condition name and HIV status in this table to have a more detailed description for each condition. The Condition ID was created by referencing the ICD 10 code for 10 different HIV variants. They range from B20 to B23, including some floating numbers.
+
+For the **Visit_occurrence** table, we set the Visit ID (VID) as the primary key and the Patient ID (PID) as the foreign key to link with the **PERSON** and **Condition_occurrence** tables. In this table, we included some important information related to the HIV test. The Test type was set as "HIV/AIDs test" for all fake patients. The Site ID was extracted from the real dataset "**HIV Testing Locations**". The Test date and the Test result was made based on the fake patients' information.
+
+In the study, we also included 2 subtables that can be used as references. We first made a **ZIPcode** table that contains all the zip codes in the **PERSON** table. Then, based on the district separation in the "NYC Condom Availability Program" public dataset, we filled in the Borough for each zip code and set the City as "NYC" for all the records. The ZIPcode was set as the primary key for this table, and the Borough as the foreign key. In addition, we created a **Test_site** table that contains demographic information for each Site ID that appear in the **Visit_occurrence** table, like Website and Phone numbers. Those information were directly extracted from the real dataset "**Test Locations**". The primary key of this table was set as the Side_ID, and the foreign key was set as the ZIPcode. 
+
 
 ### Creating Sample Patient Table
 
