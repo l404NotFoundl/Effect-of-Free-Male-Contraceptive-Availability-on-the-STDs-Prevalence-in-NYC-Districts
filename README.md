@@ -56,6 +56,35 @@ In the study, we also included 2 subtables that can be used as references. We fi
 
 ### Creating Sample Patient Table
 
+To better represents the information inside the OMOP tables, we also created a sample patient table by joining the OMOP tables using their primary and foreign keys and selecting the columns of interests. The SQL Query code used for this purpose are listed below.
+
+```SQL=
+/* Create a sample patient table that includes some important
+   information of the Patient, Visit, and Conditions*/
+SELECT p.PID, p.MRN, Age, Gender, Race, p.Address, p.ZIPcode,
+	   z.Borough, c.CID, c.Condition_name, c.HIV_status,
+	   v.Test_type, v.Test_date, v.Site_ID, v.Test_result
+INTO Patient_Sample_Table
+FROM PERSON AS p
+INNER JOIN Condition_occurrence AS c
+ON p.PID = c.PID
+INNER JOIN Visit_occurrence AS v
+ON v.PID = p.PID
+LEFT JOIN ZIPcode AS z
+ON p.ZIPcode = z.ZIPcode;
+
+/* Check out the newly created sample patient table*/
+SELECT *
+FROM Patient_Sample_Table;
+```
+
+The resulting table includes
+
+|PID |MRN |Age |Gender |Race |Address |ZIPcode |Borough |CID |Condition_name |HIV_status |Test_type |Test_date |Site_ID |Test_result |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1001 | 57011 | 25 | Male | White | 2425 Grand Avenue | 10468 | Bronx | B20 | HIV | Positive | HIV/AID Test | 2015-04-06 00:00:00.000 | 810 | Positive |
+|1002|	57012|	37|	Female|	Asian	|601 E 20th St|	10010|	Manhattan	|B20.1|	HIV	|Positive|	HIV/AID Test	|2015-07-25 00:00:00.000|	53|	Positive|
+|1003|	57013|	23|	Female|	Black	|2830 Jackson Ave	|11101|	Queens|	B20.2|	HIV	|Negative|	HIV/AID Test|	2014-03-11 00:00:00.000|	90|	Negative|
 
 ### ETL Process of the Public Data Source
 
