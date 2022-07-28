@@ -85,6 +85,14 @@ The resulting table includes
 | 1001 | 57011 | 25 | Male | White | 2425 Grand Avenue | 10468 | Bronx | B20 | HIV | Positive | HIV/AID Test | 2015-04-06 00:00:00.000 | 810 | Positive |
 |1002|	57012|	37|	Female|	Asian	|601 E 20th St|	10010|	Manhattan	|B20.1|	HIV	|Positive|	HIV/AID Test	|2015-07-25 00:00:00.000|	53|	Positive|
 |1003|	57013|	23|	Female|	Black	|2830 Jackson Ave	|11101|	Queens|	B20.2|	HIV	|Negative|	HIV/AID Test|	2014-03-11 00:00:00.000|	90|	Negative|
+|1004|	57014|	19|	Male|	Black|	310 W 55th St|	10019	|Manhattan|	B21|	HIV	|Positive|	HIV/AID Test|	2014-09-20 00:00:00.000	|167|	Positive|
+|1005	|57015|	22|	Female|	White|	179 E 93rd St	|10128|	Manhattan	|B21.1|	HIV|	Negative|	HIV/AID Test|	2015-02-27 00:00:00.000	|822|	Negative|
+|1006	|57016|	31|	Male|	Hispanic|	2642 Broadway	|10025|	Manhattan|	B22|HIV	|Negative|	HIV/AID Test|	2015-06-06 00:00:00.000	|524|	Negative|
+|1007	|57017|	52|	Female|	Asian|	327 E 116th St|	10029|	Manhattan|	B23|	HIV	|Positive|	HIV/AID Test|	2015-08-23 00:00:00.000|	119	|Positive|
+|1008	|57018|	44|	Male|	Black|	456 Main St	|10044|	Roosevelt Island|	B24|	HIV|	Negative|	HIV/AID Test|	2015-05-14 00:00:00.000|	605|	Negative|
+|1009	|57019|	28|	Male|	White|	171 Wyckoff St|	11217|	Brooklyn|	B22.1|	HIV|	Negative|	HIV/AID Test|	2015-05-01 00:00:00.000|	442	|Negative|
+|1010	|57020|	33|	Female|	Hispanic|	443 Greene Ave|	11216|	Brooklyn|	B23.2|	HIV	|Positive|	HIV/AID Test	|2015-04-06 00:00:00.000|	542|Positive|
+
 
 ### ETL Process of the Public Data Source
 
