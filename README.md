@@ -93,6 +93,7 @@ The resulting table includes
 |1009	|57019|	28|	Male|	White|	171 Wyckoff St|	11217|	Brooklyn|	B22.1|	HIV|	Negative|	HIV/AID Test|	2015-05-01 00:00:00.000|	442	|Negative|
 |1010	|57020|	33|	Female|	Hispanic|	443 Greene Ave|	11216|	Brooklyn|	B23.2|	HIV	|Positive|	HIV/AID Test	|2015-04-06 00:00:00.000|	542|Positive|
 
+<center>(Table 1. Sample Patient Information)</center>
 
 ### ETL Process of the Public Data Source
 
