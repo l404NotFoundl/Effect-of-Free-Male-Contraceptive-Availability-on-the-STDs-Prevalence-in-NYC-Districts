@@ -155,29 +155,76 @@ SELECT * FROM Table_1;
 
 <center>[Table 2. Table_1]</center>
 
+
 > Note: Some NULL values are due to lack of data in the public datasets. The patient with PID 1008 does not have some corresponding values since the public dataset does not include zip code `10044`, even though we've already updated the Borough from "Roosevelt Island" to "Manhattan".
 
 
 ### Analysis on Fake Data
 
+```SQL=
+SELECT COUNT(PID) AS Count_of_Person,
+	   HIV_status,
+	   SUM(#_AvaiCond_inZip) AS Sum_of_AvaiCond_inZip,
+	   SUM(#_AvaiCond_inBorough) AS Sum_of_AvaiCond_inBorough
+FROM Table_1
+GROUP BY HIV_status;
+```
+
+To analyze the coorelation between the HIV status and the condom availability in the fake patient data, the research team counted the number of patients in each HIV status (Negative or Positive) in the Table_1. For each HIV status, the sum of the condom distribution centers with free male condoms in each zip code and Borough were calculated separately. The result was grouped by the HIV status.
+
 
 ### Analysis on Real Data
 
+In the real datasets, the number of condom distribution centers with free male condoms in each Borough and zip code were calculated separately. Top 10 Zipcodes with the most available condom distribution centers that has free male condoms were calculated using the code below:
 
-* Top 10 Zipcodes with the most available condom distribution centers that has free male condoms
+```SQL=
+SELECT TOP 10 *
+INTO Top10_Zipcodes_#AvaiCond
+FROM ZIP_vs_Condom
+WHERE Zipcode NOT LIKE '0'
+ORDER BY #_of_Available_Male_Condom DESC
 
-	```sql=
-	USE [DBMS Final Project]
+SELECT *
+FROM Top10_Zipcodes_#AvaiCond;
+```
 
-	SELECT TOP 10 *
-	INTO Top10_Zipcodes_#AvaiCond
-	FROM ZIP_vs_Condom
-	WHERE Zipcode NOT LIKE '0'
-	ORDER BY #_of_Available_Male_Condom DESC
+The number of condom distribution centers with free male condoms were calculated using the code below:
 
-	SELECT *
-	FROM Top10_Zipcodes_#AvaiCond;
-	```
+```SQL=
+SELECT Borough, COUNT(Condoms_Male) AS #_Available_Male_Condom
+INTO Condom_by_Borough
+FROM NYC_Condom_Availability
+WHERE Borough NOT LIKE 'NULL'
+GROUP BY Borough
+
+SELECT * FROM Condom_by_Borough;
+```
+
+In addition, the research team also calculated the average HIV diagnosis rate in each borough based on the information provided in the "NYC_Condom_Availability" real dataset. The SQL Query used is listed below:
+
+```SQL=
+SELECT Borough, AVG(HIV_diagnosis_rate) AS Avg_HIV_Diag_Rate
+INTO HIV_DiagRate_by_Borough
+FROM HIV_AIDS_Annual_Report_2016
+WHERE Borough NOT LIKE 'ALL'
+GROUP BY Borough
+
+SELECT * FROM HIV_DiagRate_by_Borough;
+```
+
+Then, the research team inner joined the two new temp tables into a new table called "Borough_#ofCondoms_AvgHIVdiagRate" using their common column "Borough". The SQL Query used for this purpose is listed below:
+
+```SQL=
+SELECT c.Borough, #_Available_Male_Condom, h.Avg_HIV_Diag_Rate
+INTO Borough_#ofCondoms_AvgHIVdiagRate
+FROM Condom_by_Borough AS c
+INNER JOIN HIV_DiagRate_by_Borough AS h
+ON c.Borough = h.Borough
+ORDER BY #_Available_Male_Condom, Avg_HIV_Diag_Rate
+
+SELECT * FROM Borough_#ofCondoms_AvgHIVdiagRate
+ORDER BY Avg_HIV_Diag_Rate;
+```
 
 ### Comparing the Results
 
