@@ -41,7 +41,7 @@ In addition to the real public data source, we also created some fake HIV patien
 ## **Methodology**
 
 ### Constructing the OMOP Tables
-![image](https://user-images.githubusercontent.com/70513470/181394484-676f83d0-2622-407e-be1b-01c9ff818baf.png "ER Diagram of the OMOP Tables")<center>(Figure 1. ER Diagram for Fake Patients)</center>
+![image](https://user-images.githubusercontent.com/70513470/181394484-676f83d0-2622-407e-be1b-01c9ff818baf.png "ER Diagram of the OMOP Tables")<center>[Figure 1. ER Diagram for Fake Patients]</center>
 
 The fake database was created in the Microsoft SQL Server 2018 following the OMOP common data model framework. To have more information diversity in our study, we decided to use 5 different tables to built this relational database: **PERSON**, **Condition_occurrence**, **Visit_occurrence**, **ZIPcode**, and **Test_site**.
 
@@ -93,7 +93,7 @@ The resulting table includes some demographic information of each fake patient a
 |1009	|57019|	28|	Male|	White|	171 Wyckoff St|	11217|	Brooklyn|	B22.1|	HIV|	Negative|	HIV/AID Test|	2015-05-01 00:00:00.000|	442	|Negative|
 |1010	|57020|	33|	Female|	Hispanic|	443 Greene Ave|	11216|	Brooklyn|	B23.2|	HIV	|Positive|	HIV/AID Test	|2015-04-06 00:00:00.000|	542|Positive|
 
-<center>(Table 1. Sample Patient Information)</center>
+<center>[Table 1. Sample Patient Information]</center>
 
 ### ETL Process of the Public Data Source
 
@@ -107,7 +107,7 @@ The resulting table includes some demographic information of each fake patient a
 
 ### Creating Table_1
 
-To clean the datasets and better prepare for the downstream analysis process, the research team decided to create a Table_1 that include all the information needed to conduct the data analysis and generate the target result. In the SQL Query, the research team selected the columns of interests from different tables and temp tables into a new table called Table_1. The left join was used for all the joining processes since the team wanted to keep every unique record from the PERSON table into the Table_1. The tables and temp tables we used include: PERSON, ZIP_vs_Condom, Condition_occurrence, ZIPcode, Borough_vs_Avg_diagrate, Condom_by_Borough. The Table_1 was then ordered by the Patient ID (PID). The SQL Query that creates the Table_1 is listed below.
+To clean the datasets and better prepare for the downstream analysis process, the research team decided to create a Table_1 that include all the information needed to conduct the data analysis and generate the target result. In the SQL Query, the research team selected the columns of interests from different tables and temp tables into a new table called Table_1. The left join was used for all the joining processes since the team wanted to keep every unique record from the PERSON table into the Table_1. The tables and temp tables we used include: PERSON, ZIP_vs_Condom, Condition_occurrence, ZIPcode, Borough_vs_Avg_diagrate, Condom_by_Borough. The Table_1 was then ordered by the Patient ID (PID). The SQL Query and the resulting Table_1 are listed below.
 
 ```SQL=
 /* Link all the tables together into Table_1 and select the useful columns */
@@ -139,6 +139,23 @@ ORDER BY PID;
 
 SELECT * FROM Table_1;
 ```
+
+|PID|	MRN	|Gender	|Race|	Age	|Address|	Borough	|ZIPcode|	HIV_status|	#_AvaiCond_inZip|	#_AvaiCond_inBorough|	Avg_HIV_DiagRate_by_Borough|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|1001|	57011	|Male	|White	|25|2425 Grand Avenue	|Bronx|	10468	|Positive|	7|	125|	46.4560999550819
+|1002	|57012|	Female|	Asian|	37|	601 E 20th St|	Manhattan	|10010	|Positive	|2	|244	|53.9006544549248|
+|1003	|57013|	Female|	Black	|23	|2830 Jackson Ave|	Queens	|11101|	Negative|	3	|107|	21.1922908728339
+|1004	|57014|	Male|	Black|	19|	310 W 55th St|	Manhattan	|10019|	Positive|	5	|244	|53.9006544549248|
+|1005	|57015|	Female|	White	|22|	179 E 93rd St	|Manhattan|	10128	|Negative|	NULL	|244|	53.9006544549248|
+|1006	|57016|	Male|	Hispanic|	31|	2642 Broadway|	Manhattan	|10025|	Negative|	8	|244|	53.9006544549248
+|1007	|57017|	Female|	Asian|	52|	327 E 116th St|	Manhattan|	10029	|Positive	|9	|244|	53.9006544549248|
+|1008|	57018	|Male	|Black|	44|	456 Main St|Manhattan|	10044	|Negative|	NULL|	NULL|	NULL|
+|1009	|57019|	Male|	White|	28|	171 Wyckoff St|	Brooklyn|	11217	|Negative	|11	|216	|35.827733327349|
+|1010	|57020|	Female|	Hispanic	|33	|443 Greene Ave|	Brooklyn|	11216	|Positive|	18|	216|	35.827733327349
+
+
+* Note: Some NULL values are due to lack of data in the public datasets. The patient with PID 1008 does not have some corresponding values since the public dataset does not include zip code `10044`, even though we've already updated the Borough from "Roosevelt Island" to "Manhattan".
+
 
 ### Analysis on Fake Data
 
