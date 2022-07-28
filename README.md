@@ -231,7 +231,7 @@ ORDER BY Avg_HIV_Diag_Rate;
 From the previous analysis process, the researchers will find the relationship between number of available condom distribution centers with free male condoms and the average HIV diagnosis rate in each district in both fake and real datasets.
 To find out the difference between the fake data and the real data, the research team will compare the results and see if both fake and real data have similar trends.
 
-In addition, the research team will also build the Heat Map visualization on condom distribution in real data to better represent the density of the condom distribution centers. The Marker Map will also be built to analyze the fake individuals’ location and their travel distance to the nearest condom distribution center. 
+In addition, the research team will also build the Heat Map visualization on condom distribution in real data to better represent the density of the condom distribution centers. The Marker Map will also be built to analyze the fake individuals’ location and their travel distance to the nearest condom distribution center.
 
 
 ## **Result**
