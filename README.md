@@ -103,10 +103,42 @@ The resulting table includes some demographic information of each fake patient a
 
 3. With both real and fake datasets in the local MS SQL Server, we then linked them together using their primary or foreign keys, for example, ZIPcode, Borough, and Site ID.
 
-4. Based on the information contained in both real and fake data, the temporary tables were created. Those temp tables include: ZIPcode vs. Condom Availability, Borough vs. Condom Availability, Borough vs. Average HIV Diagnosis Rate, Borough vs. Condom Availability vs. Avg HIV Diag Rate (Note: the Condom Availability was calculated as the number of condom distribution centers with free male condoms). 
+4. Based on the information contained in both real and fake data, the temporary tables were created. Those temp tables include: ZIPcode vs. Condom Availability, Borough vs. Condom Availability, Borough vs. Average HIV Diagnosis Rate, Borough vs. Condom Availability vs. Avg HIV Diag Rate (Note: the Condom Availability was calculated as the number of condom distribution centers with free male condoms).
 
 ### Creating Table_1
 
+To clean the datasets and better prepare for the downstream analysis process, the research team decided to create a Table_1 that include all the information needed to conduct the data analysis and generate the target result. In the SQL Query, the research team selected the columns of interests from different tables and temp tables into a new table called Table_1. The left join was used for all the joining processes since the team wanted to keep every unique record from the PERSON table into the Table_1. The tables and temp tables we used include: PERSON, ZIP_vs_Condom, Condition_occurrence, ZIPcode, Borough_vs_Avg_diagrate, Condom_by_Borough. The Table_1 was then ordered by the Patient ID (PID). The SQL Query that creates the Table_1 is listed below.
+
+```SQL=
+/* Link all the tables together into Table_1 and select the useful columns */
+SELECT p.PID,
+	   MRN,
+	   Gender,
+	   Race,
+	   Age,
+	   p.Address,
+	   z1.Borough,
+	   p.ZIPcode,
+	   c.HIV_status,
+	   z.#_of_Available_Male_Condom AS #_AvaiCond_inZip,
+	   b1.#_Available_Male_Condom AS #_AvaiCond_inBorough,
+	   b.Avg_HIV_diag_rate AS Avg_HIV_DiagRate_by_Borough
+INTO Table_1
+FROM PERSON AS p
+LEFT JOIN ZIP_vs_Condom AS z
+ON p.ZIPcode = z.Zipcode
+LEFT JOIN Condition_occurrence AS c
+ON c.PID = p.PID
+LEFT JOIN ZIPcode AS z1
+ON z1.ZIPcode = p.ZIPcode
+LEFT JOIN Borough_vs_Avg_diagrate AS b
+ON b.Borough = z1.Borough
+LEFT JOIN Condom_by_Borough AS b1
+ON b1.Borough = z1.Borough
+ORDER BY PID;
+
+SELECT * FROM Table_1;
+```
 
 ### Analysis on Fake Data
 
