@@ -235,17 +235,38 @@ In addition, the research team will also build the Heat Map visualization on con
 
 
 ## **Result**
+
+By analyzing our real datasets, we found out the number of condom distribution centers that have free male condoms in each borough. This information is stored in the temporary table "Condom_by_Borough". To better visualize the data, the research team created a bar chart addressing this table. As shown in the bar chart below, the Bronx borough has 125 condom distribution centers with free available male condoms. The Brooklyn has 216 of them, and Manhattan has the highest number of condom distribution centers with 244 in the area. The Queens borough has 107 of distribution centers, and the Staten Island has the lowest number of distribution centers with only 10 in the area.
+
 ![Number of Condom Distribution Centers Per Borough](https://user-images.githubusercontent.com/70513470/181414590-e36abd76-9216-485a-bd85-197b1b379f1a.png)
+(Figure 2. Number of Condom Distribution Centers by Borough)
+
+---
+
+In addition to the condom by boroughs, we also selected the top 10 zip codes that has the highest number of condom distribution centers in the area by using our real dataset "NYC Condom Availability Program". The results are shown below.
 
 ![Top 10 Zipcodes by Number of Condom Distribution Centers](https://user-images.githubusercontent.com/70513470/181414620-ff72a6a4-2ca1-418b-b6ed-1ed60f0323b9.png)
+(Figure 3. Top 10 Zip Codes by Number of Condom Distribution Centers)
+
+---
+To better visualize the relationship between the condom availability and the average HIV diagnosis rate, we also built a hybrid chart based on the information in the "Borough_#ofCondoms_AvgHIVdiagRate" temporary table. The blue bars in the following chart represent the number of condom distribution centers with free male condoms in each borough in the NYC, and the orange line represents the average HIV diagnosis rate in each borough. The result in this hybrid chart clearly shows that with more condom distribution centers in the borough, the average HIV diagnosis rate will also increase.
 
 ![Free Male Condom Availability and Average HIV Diagnosis Rate by Borough](https://user-images.githubusercontent.com/70513470/181414636-7b05b29c-4541-448c-a573-139206436b1f.png)
+(Figure 4. Free Male Condom Availability and Average HIV Diagnosis Rate by Borough)
+
+---
+Based on the information contained in the Table_1, the research team built a complex chart that shows the fake patients' PID, their HIV status, the number of condom distribution centers in the borough they live, and the average HIV diagnosis rate for the borough. In this graph, the fake patients who live in Manhattan has the highest condom availability with a relatively higher average HIV diagnosis rate, as shown by the orange line. The fake patients who live in Brooklyn has the second highest condom availability and a relatively lower HIV diagnosis rate (lower than both Manhattan and Bronx). The fake patient who lives in Bronx (PID 1001) has a relatively lower condom availability in the borough but a higher HIV diagnosis rate. Finally, the fake patient who lives in Queens has the lowest condom availability with the lowest HIV diagnosis rate as well.
 
 ![Condom Distribution centers and Diagnosis Rate per fake patient Zipcode (Borough)](https://user-images.githubusercontent.com/70513470/181414648-ea5e4b4b-7d76-492d-9a6c-8f57cb2f0c98.png)
+(Figure 5. Condom Distribution centers and Diagnosis Rate per Fake Patient Zip code (Borough))
+
+---
+The following bar chart is used to examine the relationship between the HIV status in fake patients and the condom availability in the districts. The blue bars show the sum of the condom distribution centers with free male condoms in the zip code that the fake patients live. In the HIV negative patients, there are in total of 22 condom distribution centers in the zip codes they live. In the HIV positive patients, there are 41 available condom distribution centers in the zip codes they live. The orange bars represent the sum of condom distribution centers with free male condoms in the borough that those patients live. For the HIV negative patients, there are 811 condom distribution centers in the borough they live, whereas in HIV positive patients, there are 1073 condom distribution centers in the borough.These results show that the patients with positive HIV status have more available free condoms in the area they live than those HIV negative patients.
 
 ![Sum of Condom Distribution Centers in certain Zipcode or Borough by HIV Status](https://user-images.githubusercontent.com/70513470/181414667-2e7ac7ec-6e19-43ac-9d8a-30f8e0a88526.png)
+(Figure 6. Sum of Condom Distribution Centers in certain Zipcode or Borough by HIV Status)
 
-
+---
 
 * [Heat Map](https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/Condom_Availability_map.html)
 
