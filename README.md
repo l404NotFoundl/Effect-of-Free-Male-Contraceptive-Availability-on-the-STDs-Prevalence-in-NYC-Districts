@@ -266,7 +266,6 @@ The following bar chart is used to examine the relationship between the HIV stat
 ![Sum of Condom Distribution Centers in certain Zipcode or Borough by HIV Status](https://user-images.githubusercontent.com/70513470/181414667-2e7ac7ec-6e19-43ac-9d8a-30f8e0a88526.png)
 (Figure 6. Sum of Condom Distribution Centers in certain Zipcode or Borough by HIV Status)
 
----
 ### Google Platform Geocoding API:
 
 * [Heat Map](https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/Condom_Availability_map.html)
