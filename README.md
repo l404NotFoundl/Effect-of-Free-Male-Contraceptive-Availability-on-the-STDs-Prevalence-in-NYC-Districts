@@ -267,7 +267,8 @@ Based on the information contained in the Table_1, the research team built a com
 ---
 The following bar chart is used to examine the relationship between the HIV status in fake patients and the condom availability in the districts. The blue bars show the sum of the condom distribution centers with free male condoms in the zip code that the fake patients live. In the HIV negative patients, there are in total of 22 condom distribution centers in the zip codes they live. In the HIV positive patients, there are 41 available condom distribution centers in the zip codes they live. The orange bars represent the sum of condom distribution centers with free male condoms in the borough that those patients live. For the HIV negative patients, there are 811 condom distribution centers in the borough they live, whereas in HIV positive patients, there are 1073 condom distribution centers in the borough.These results show that the patients with positive HIV status have more available free condoms in the area they live than those HIV negative patients.
 
-![Sum of Condom Distribution Centers in certain Zipcode or Borough by HIV Status](https://user-images.githubusercontent.com/70513470/181414667-2e7ac7ec-6e19-43ac-9d8a-30f8e0a88526.png)
+![Sum of Condom Distribution Centers in certain Zipcode or Borough by HIV Status](https://user-images.githubusercontent.com/70513470/181414667-2e7ac7ec-6e19-43ac-9d8a-30f8e0a88526.png "(Figure 6. Sum of Condom Distribution Centers in certain Zipcode or Borough by HIV Status)")
+
 (Figure 6. Sum of Condom Distribution Centers in certain Zipcode or Borough by HIV Status)
 
 ### Google Platform Geocoding API
