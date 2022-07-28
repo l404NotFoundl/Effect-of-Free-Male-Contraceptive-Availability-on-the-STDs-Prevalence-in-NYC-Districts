@@ -42,6 +42,12 @@ In addition to the real public data source, we also created some fake HIV patien
 
 ### Constructing the OMOP Tables
 
+The fake database was created in the Microsoft SQL Server 2018 following the OMOP common data model framework. To have more information diversity in our study, we decided to use 5 different tables to built this relational database: **PERSON**, **Condition_occurrence**, **Visit_occurrence**, **ZIPcode**, and **Test_site**.
+
+
+
+In the PERSON table,
+
 ### Creating Sample Patient Table
 
 
