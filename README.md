@@ -78,7 +78,7 @@ SELECT *
 FROM Patient_Sample_Table;
 ```
 
-The resulting table includes
+The resulting table includes some demographic information of each fake patient and also the Condition ID and name from Condition_occurrence table. The HIV status and the test date, type, and result were also included, along with the test Site ID.
 
 |PID |MRN |Age |Gender |Race |Address |ZIPcode |Borough |CID |Condition_name |HIV_status |Test_type |Test_date |Site_ID |Test_result |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
