@@ -236,6 +236,11 @@ In addition, the research team will also build the Heat Map visualization on con
 
 ## **Result**
 
+* Heat Map: https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/Condom_Availability_map.html
+
+* Marker Map: https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/fake_patients_loc.html
+
+* Combined Hybrid Map: https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/Combined_map.html
 
 ## **Discussion**
 ### Limitation
