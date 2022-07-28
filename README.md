@@ -151,8 +151,9 @@ SELECT * FROM Table_1;
 |1007	|57017|	Female|	Asian|	52|	327 E 116th St|	Manhattan|	10029	|Positive	|9	|244|	53.9006544549248|
 |1008|	57018	|Male	|Black|	44|	456 Main St|Manhattan|	10044	|Negative|	NULL|	NULL|	NULL|
 |1009	|57019|	Male|	White|	28|	171 Wyckoff St|	Brooklyn|	11217	|Negative	|11	|216	|35.827733327349|
-|1010	|57020|	Female|	Hispanic	|33	|443 Greene Ave|	Brooklyn|	11216	|Positive|	18|	216|	35.827733327349
+|1010	|57020|	Female|	Hispanic	|33	|443 Greene Ave|	Brooklyn|	11216	|Positive|	18|	216|	35.827733327349|
 
+<center>[Table 2. Table_1]</center>
 
 * Note: Some NULL values are due to lack of data in the public datasets. The patient with PID 1008 does not have some corresponding values since the public dataset does not include zip code `10044`, even though we've already updated the Borough from "Roosevelt Island" to "Manhattan".
 
