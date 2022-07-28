@@ -19,7 +19,7 @@
   * [Analysis on Real Data](#analysis-on-real-data)
   * [Comparing the Results](#comparing-the-results)
 - [Result](#result)
-  * [Analysis Result](#analysis-result)
+  * [Analysis Results](#analysis-results)
   * [Google Platform Geocoding API](#google-platform-geocoding-api)
 - [Discussion](#discussion)
   * [Limitation](#limitation)
