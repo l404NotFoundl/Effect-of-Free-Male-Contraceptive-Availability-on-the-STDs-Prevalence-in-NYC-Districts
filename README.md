@@ -23,8 +23,7 @@
   * [Google Platform Geocoding API](#google-platform-geocoding-api)
 - [Discussion](#discussion)
   * [Limitation](#limitation)
-  * [Improvement](#improvement)
-- [Conclusion](#conclusion)
+  * [Conclusion](#conclusion)
 - [Reference](#reference)
 
 
@@ -293,32 +292,16 @@ The 3 maps in html format are shown below. Please note that you can only view th
 ## **Discussion**
 
 ### Limitation
-Outline:
-  Public data source created in 2016, 2018
-  Results of analyzing these 6-year-old datasets may not be generalizable to current situation in 2022
-  more updates needed
-  Condom availability datasets and HIV/AIDs report created in different years:
-  Mismatch may affect the accuracy of the result
-
-  Truth? More publicly available condoms result in higher HIV diagnosis rate?
-  Male condom availability might not be the only reason for this rising diagnosis rate
-  Area of the Borough:
-  bigger borough may have more available condoms, and more HIV-positive patients
-  3 APIs can be used:
-  Geocoding
-  Places (no Zip → Coord)
-  Matrix (Distance)
-
-Formal:
 
 After reviewing our results, the research team raised a couple of limitations that may potentially lead our research into the wrong direction. The first limitation is related to the creation and modification time of the public datasets. As we've mentioned above, the "NYC Condom Availability Program" dataset was created in 2018, and the "DOHMH HIV/AIDs Annual Report" was created in 2016. The results calculated from analyzing those 6-year-old datasets may not be generalizable to the current situation in 2022. The demographics of New York City have changed over the years, and it's possible that condom distribution centers have adjusted their addresses and quantities. To better address this limitation in our study, we need to have more update from both the public datasets and our own study method. In addition, the mismatch of the creation time of these two public datasets may cause a dramatic decrease in the accuracy of the result. The increase in the HIV diagnosis rate in 2016 was not likely due to the increase in the condom distribution centers in 2018.
 
-Furthermore, there might be other factors that contribute to the increase in the average HIV diagnosis rate in our study result. For example, the bigger boroughs in NYC may have more available condoms in the area, and accordingly, more HIV-positive patients. Even though the Heat Map can be used to calculate the density of the condoms distribution centers in the city, there's no way for us to normalize the data and have a clear balance between the area of each borough. However, there are a couple of more analyzation we can do to solve this issue. We can use the Google Platform Places API to change the fake patients address into coordinates without knowing their zip codes. Moreover, the Google Matrix API can also be implemented to calculate the travel distance and time between the fake patients and the nearest condom distribution centers. Those measurements can be used to improve our study and make it more comprehensive and intuitive. 
-
-### Improvement
+Furthermore, there might be other factors that contribute to the increase in the average HIV diagnosis rate in our study result. For example, the bigger boroughs in NYC may have more available condoms in the area, and accordingly, more HIV-positive patients. Even though the Heat Map can be used to calculate the density of the condoms distribution centers in the city, there's no way for us to normalize the data and have a clear balance between the area of each borough. However, there are a couple of more analyzation we can do to solve this issue. We can use the Google Platform Places API to change the fake patients address into coordinates without knowing their zip codes. Moreover, the Google Matrix API can also be implemented to calculate the travel distance and time between the fake patients and the nearest condom distribution centers. Those measurements can be used to improve our study and make it more comprehensive and intuitive.
 
 
-## **Conclusion**
+### Conclusion
 
+In the fake datasets, the research team found that the increase in the number of the condom distribution centers with free male condoms is associated with a higher HIV diagnosis rate in the districts those patients live. Meanwhile, in our real datasets, the research team discovered that with more condom distribution centers in the borough, the HIV diagnosis rate also goes higher. Those two results align with each other.
+
+In the future, our study can be used as a reference for the public health department like Department of Health and Mental Hygiene to alter their policies in condom distribution in NYC. Moreover, the Heat Maps and the Geocoding strategies in our study can also be used to analyze other coorelations between built environment and the public health. For example, we can build a Heat Map with all the rat habitats and analyze its overlapping area with the epidemic prevalence map in NYC to know how the rat activities affect the spread of diseases in human society.
 
 ## **Reference**
