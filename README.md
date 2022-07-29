@@ -273,6 +273,9 @@ The following bar chart is used to examine the relationship between the HIV stat
 
 ### Google Platform Geocoding API
 
+![image](https://user-images.githubusercontent.com/70513470/181668362-4111b446-e88c-4bc2-b9f1-be1153551434.png)
+(Figure 7. Hybrid Map for both Heat Map and Marker Map)
+
 Aside from the data analyzation process, the research team also implemented the Python-based Heat Map layer from Google Platform Geocoding API to better visualize the density of the condom distribution centers in the NYC. Also, a Marker Map layer was made to identify the address of each fake patient on an interactive map. Finally, we combined two layers together into one google map html file to observe the distance between the fake patients and the nearest condom distribution centers.
 
 The 3 maps in html format are shown below. Please note that you can only view those maps after you copy the raw content of the html file and paste it into some online html viewers. For more instructions on generating those google maps in Python, please refer to the file `Geocoding.ipynb` in the "Results" folder in the repository.
