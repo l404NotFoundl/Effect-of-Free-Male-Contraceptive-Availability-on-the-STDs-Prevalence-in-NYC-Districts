@@ -273,9 +273,9 @@ The following bar chart is used to examine the relationship between the HIV stat
 
 ### Google Platform Geocoding API
 
-Aside from the data analyzation process, the research team also implemented the Heat Map layer from Google Platform Geocoding API to better visualize the density of the condom distribution centers in the NYC. Also, a Marker Map layer was made to identify the address of each fake patient on an interactive map. Finally, we combined two layers together into one google map html file to observe the distance between the fake patients and the nearest condom distribution centers.
+Aside from the data analyzation process, the research team also implemented the Python-based Heat Map layer from Google Platform Geocoding API to better visualize the density of the condom distribution centers in the NYC. Also, a Marker Map layer was made to identify the address of each fake patient on an interactive map. Finally, we combined two layers together into one google map html file to observe the distance between the fake patients and the nearest condom distribution centers.
 
-The 3 maps in html format are shown below. Please note that you can only view those maps after you copy the raw content of the html file and paste it into some online html viewers.
+The 3 maps in html format are shown below. Please note that you can only view those maps after you copy the raw content of the html file and paste it into some online html viewers. For more instructions on generating those google maps in Python, please refer to the file `Geocoding.ipynb` in the "Results" folder in the repository.
 
 [Heat Map](https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/Condom_Availability_map.html)
 
@@ -284,7 +284,25 @@ The 3 maps in html format are shown below. Please note that you can only view th
 [Combined Hybrid Map](https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/Combined_map.html)
 
 ## **Discussion**
+
 ### Limitation
+
+Public data source created in 2016, 2018
+Results of analyzing these 6-year-old datasets may not be generalizable to current situation in 2022
+more updates needed
+Condom availability datasets and HIV/AIDs report created in different years:
+Mismatch may affect the accuracy of the result
+
+Truth? More publicly available condoms result in higher HIV diagnosis rate?
+Male condom availability might not be the only reason for this rising diagnosis rate
+Area of the Borough:
+bigger borough may have more available condoms, and more HIV-positive patients
+3 APIs can be used:
+Geocoding
+Places (no Zip → Coord)
+Matrix (Distance)
+
+
 ### Improvement
 
 
