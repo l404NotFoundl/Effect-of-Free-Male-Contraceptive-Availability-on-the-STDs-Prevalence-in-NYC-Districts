@@ -305,9 +305,9 @@ In the fake datasets, the research team found that the increase in the number of
 In the future, our study can be used as a reference for the public health department like Department of Health and Mental Hygiene to alter their policies in condom distribution in NYC. Moreover, the Heat Maps and the Geocoding strategies in our study can also be used to analyze other coorelations between built environment and the public health. For example, we can build a Heat Map with all the rat habitats and analyze its overlapping area with the epidemic prevalence map in NYC to know how the rat activities affect the spread of diseases in human society.
 
 ## **Reference**
-1. NYC Condom Availability Program - HIV condom distribution locations
+1. NYC Condom Availability Program - HIV condom distribution locations    
 https://data.cityofnewyork.us/Health/NYC-Condom-Availability-Program-HIV-condom-distrib/4kpn-sezh
-2. DOHMH HIV/AIDS Annual Report
+2. DOHMH HIV/AIDS Annual Report     
 https://data.cityofnewyork.us/Health/DOHMH-HIV-AIDS-Annual-Report/fju2-rdad
 3. HIV Testing Locations  
 https://data.cityofnewyork.us/Health/HIV-Testing-Locations/72ss-25qh
