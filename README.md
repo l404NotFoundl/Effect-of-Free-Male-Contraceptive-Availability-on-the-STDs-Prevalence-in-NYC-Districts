@@ -242,26 +242,29 @@ In addition, the research team will also build the Heat Map visualization on con
 
 By analyzing our real datasets, we found out the number of condom distribution centers that have free male condoms in each borough. This information is stored in the temporary table "Condom_by_Borough". To better visualize the data, the research team created a bar chart addressing this table. As shown in the bar chart below, the Bronx borough has 125 condom distribution centers with free available male condoms. The Brooklyn has 216 of them, and Manhattan has the highest number of condom distribution centers with 244 in the area. The Queens borough has 107 of distribution centers, and the Staten Island has the lowest number of distribution centers with only 10 in the area.
 
-![Number of Condom Distribution Centers Per Borough](https://user-images.githubusercontent.com/70513470/181414590-e36abd76-9216-485a-bd85-197b1b379f1a.png)
+![Number of Condom Distribution Centers Per Borough](https://user-images.githubusercontent.com/70513470/181414590-e36abd76-9216-485a-bd85-197b1b379f1a.png "(Figure 2. Number of Condom Distribution Centers by Borough)")
 (Figure 2. Number of Condom Distribution Centers by Borough)
 
 ---
 
 In addition to the condom by boroughs, we also selected the top 10 zip codes that has the highest number of condom distribution centers in the area by using our real dataset "NYC Condom Availability Program". The results are shown below.
 
-![Top 10 Zipcodes by Number of Condom Distribution Centers](https://user-images.githubusercontent.com/70513470/181414620-ff72a6a4-2ca1-418b-b6ed-1ed60f0323b9.png)
+![Top 10 Zipcodes by Number of Condom Distribution Centers](https://user-images.githubusercontent.com/70513470/181414620-ff72a6a4-2ca1-418b-b6ed-1ed60f0323b9.png "(Figure 3. Top 10 Zip Codes by Number of Condom Distribution Centers)")
+
 (Figure 3. Top 10 Zip Codes by Number of Condom Distribution Centers)
 
 ---
 To better visualize the relationship between the condom availability and the average HIV diagnosis rate, we also built a hybrid chart based on the information in the "Borough_#ofCondoms_AvgHIVdiagRate" temporary table. The blue bars in the following chart represent the number of condom distribution centers with free male condoms in each borough in the NYC, and the orange line represents the average HIV diagnosis rate in each borough. The result in this hybrid chart clearly shows that with more condom distribution centers in the borough, the average HIV diagnosis rate will also increase.
 
-![Free Male Condom Availability and Average HIV Diagnosis Rate by Borough](https://user-images.githubusercontent.com/70513470/181414636-7b05b29c-4541-448c-a573-139206436b1f.png)
+![Free Male Condom Availability and Average HIV Diagnosis Rate by Borough](https://user-images.githubusercontent.com/70513470/181414636-7b05b29c-4541-448c-a573-139206436b1f.png "(Figure 4. Free Male Condom Availability and Average HIV Diagnosis Rate by Borough)")
+
 (Figure 4. Free Male Condom Availability and Average HIV Diagnosis Rate by Borough)
 
 ---
 Based on the information contained in the Table_1, the research team built a complex chart that shows the fake patients' PID, their HIV status, the number of condom distribution centers in the borough they live, and the average HIV diagnosis rate for the borough. In this graph, the fake patients who live in Manhattan has the highest condom availability with a relatively higher average HIV diagnosis rate, as shown by the orange line. The fake patients who live in Brooklyn has the second highest condom availability and a relatively lower HIV diagnosis rate (lower than both Manhattan and Bronx). The fake patient who lives in Bronx (PID 1001) has a relatively lower condom availability in the borough but a higher HIV diagnosis rate. Finally, the fake patient who lives in Queens has the lowest condom availability with the lowest HIV diagnosis rate as well.
 
-![Condom Distribution centers and Diagnosis Rate per fake patient Zipcode (Borough)](https://user-images.githubusercontent.com/70513470/181414648-ea5e4b4b-7d76-492d-9a6c-8f57cb2f0c98.png)
+![Condom Distribution centers and Diagnosis Rate per fake patient Zipcode (Borough)](https://user-images.githubusercontent.com/70513470/181414648-ea5e4b4b-7d76-492d-9a6c-8f57cb2f0c98.png "(Figure 5. Condom Distribution centers and Diagnosis Rate per Fake Patient Zip code (Borough))")
+
 (Figure 5. Condom Distribution centers and Diagnosis Rate per Fake Patient Zip code (Borough))
 
 ---
@@ -273,10 +276,11 @@ The following bar chart is used to examine the relationship between the HIV stat
 
 ### Google Platform Geocoding API
 
-![image](https://user-images.githubusercontent.com/70513470/181668362-4111b446-e88c-4bc2-b9f1-be1153551434.png)
-(Figure 7. Hybrid Map for both Heat Map and Marker Map)
+Aside from the data analytic process, the research team also implemented the Python-based Heat Map layer from Google Platform Geocoding API to better visualize the density of the condom distribution centers in the NYC. The research team input the coordinates (latitude and longitude) of each condom distribution center with free male condoms into the Geocoding package, `gmaps`. Then, the gmaps will automatically generate the Heat Map in the jupyter notebook based on the provided coordinates. Also, a Marker Map layer was made to identify the address of each fake patient on an interactive map. Initially, we only have zip codes for each fake patients. To transform the zip codes into coordinates, the research team used an online service from **Geocodio** (https://www.geocod.io/bulk-convert-zip-codes-to-coordinates/) to achieve this goal. The transformed coordinates were then fed into the Geocoding API and generated a Marker Map layer. Finally, we combined two layers together into one google map html file to observe the distance between the fake patients and the nearest condom distribution centers. A sample image of the combined map is shown below. All of the maps are interactive for users. You can zoom in, zoom out, and even adjust the view from Street Map to Satellite view with location labels.
 
-Aside from the data analyzation process, the research team also implemented the Python-based Heat Map layer from Google Platform Geocoding API to better visualize the density of the condom distribution centers in the NYC. Also, a Marker Map layer was made to identify the address of each fake patient on an interactive map. Finally, we combined two layers together into one google map html file to observe the distance between the fake patients and the nearest condom distribution centers.
+![Hybrid Map for both Heat Map and Marker Map](https://user-images.githubusercontent.com/70513470/181668362-4111b446-e88c-4bc2-b9f1-be1153551434.png "(Figure 7. Hybrid Map for both Heat Map and Marker Map)")
+
+(Figure 7. Hybrid Map for both Heat Map and Marker Map)
 
 The 3 maps in html format are shown below. Please note that you can only view those maps after you copy the raw content of the html file and paste it into some online html viewers. For more instructions on generating those google maps in Python, please refer to the file `Geocoding.ipynb` in the "Results" folder in the repository.
 
@@ -289,22 +293,27 @@ The 3 maps in html format are shown below. Please note that you can only view th
 ## **Discussion**
 
 ### Limitation
+Outline:
+  Public data source created in 2016, 2018
+  Results of analyzing these 6-year-old datasets may not be generalizable to current situation in 2022
+  more updates needed
+  Condom availability datasets and HIV/AIDs report created in different years:
+  Mismatch may affect the accuracy of the result
 
-Public data source created in 2016, 2018
-Results of analyzing these 6-year-old datasets may not be generalizable to current situation in 2022
-more updates needed
-Condom availability datasets and HIV/AIDs report created in different years:
-Mismatch may affect the accuracy of the result
+  Truth? More publicly available condoms result in higher HIV diagnosis rate?
+  Male condom availability might not be the only reason for this rising diagnosis rate
+  Area of the Borough:
+  bigger borough may have more available condoms, and more HIV-positive patients
+  3 APIs can be used:
+  Geocoding
+  Places (no Zip → Coord)
+  Matrix (Distance)
 
-Truth? More publicly available condoms result in higher HIV diagnosis rate?
-Male condom availability might not be the only reason for this rising diagnosis rate
-Area of the Borough:
-bigger borough may have more available condoms, and more HIV-positive patients
-3 APIs can be used:
-Geocoding
-Places (no Zip → Coord)
-Matrix (Distance)
+Formal:
 
+After reviewing our results, the research team raised a couple of limitations that may potentially lead our research into the wrong direction. The first limitation is related to the creation and modification time of the public datasets. As we've mentioned above, the "NYC Condom Availability Program" dataset was created in 2018, and the "DOHMH HIV/AIDs Annual Report" was created in 2016. The results calculated from analyzing those 6-year-old datasets may not be generalizable to the current situation in 2022. The demographics of New York City have changed over the years, and it's possible that condom distribution centers have adjusted their addresses and quantities. To better address this limitation in our study, we need to have more update from both the public datasets and our own study method. In addition, the mismatch of the creation time of these two public datasets may cause a dramatic decrease in the accuracy of the result. The increase in the HIV diagnosis rate in 2016 was not likely due to the increase in the condom distribution centers in 2018.
+
+Furthermore, there might be other factors that contribute to the increase in the average HIV diagnosis rate in our study result. For example, the bigger boroughs in NYC may have more available condoms in the area, and accordingly, more HIV-positive patients. Even though the Heat Map can be used to calculate the density of the condoms distribution centers in the city, there's no way for us to normalize the data and have a clear balance between the area of each borough. However, there are a couple of more analyzation we can do to solve this issue. We can use the Google Platform Places API to change the fake patients address into coordinates without knowing their zip codes. Moreover, the Google Matrix API can also be implemented to calculate the travel distance and time between the fake patients and the nearest condom distribution centers. Those measurements can be used to improve our study and make it more comprehensive and intuitive. 
 
 ### Improvement
 
