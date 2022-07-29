@@ -42,7 +42,8 @@ In addition to the real public data source, we also created some fake HIV patien
 ## **Methodology**
 
 ### Constructing the OMOP Tables
-![image](https://user-images.githubusercontent.com/70513470/181394484-676f83d0-2622-407e-be1b-01c9ff818baf.png "ER Diagram of the OMOP Tables")<center>[Figure 1. ER Diagram for Fake Patients]</center>
+![image](https://user-images.githubusercontent.com/70513470/181394484-676f83d0-2622-407e-be1b-01c9ff818baf.png "ER Diagram of the OMOP Tables")
+(Figure 1. ER Diagram for Fake Patients)
 
 The fake database was created in the Microsoft SQL Server 2018 following the OMOP common data model framework. To have more information diversity in our study, we decided to use 5 different tables to built this relational database: **PERSON**, **Condition_occurrence**, **Visit_occurrence**, **ZIPcode**, and **Test_site**.
 
@@ -94,7 +95,7 @@ The resulting table includes some demographic information of each fake patient a
 |1009	|57019|	28|	Male|	White|	171 Wyckoff St|	11217|	Brooklyn|	B22.1|	HIV|	Negative|	HIV/AID Test|	2015-05-01 00:00:00.000|	442	|Negative|
 |1010	|57020|	33|	Female|	Hispanic|	443 Greene Ave|	11216|	Brooklyn|	B23.2|	HIV	|Positive|	HIV/AID Test	|2015-04-06 00:00:00.000|	542|Positive|
 
-<center>[Table 1. Sample Patient Information]</center>
+(Table 1. Sample Patient Information)
 
 ### ETL Process of the Public Data Source
 
@@ -154,7 +155,7 @@ SELECT * FROM Table_1;
 |1009	|57019|	Male|	White|	28|	171 Wyckoff St|	Brooklyn|	11217	|Negative	|11	|216	|35.827733327349|
 |1010	|57020|	Female|	Hispanic	|33	|443 Greene Ave|	Brooklyn|	11216	|Positive|	18|	216|	35.827733327349|
 
-<center>[Table 2. Table_1]</center>
+(Table 2. Table_1)
 
 
 > Note: Some NULL values are due to lack of data in the public datasets. The patient with PID 1008 does not have some corresponding values since the public dataset does not include zip code `10044`, even though we've already updated the Borough from "Roosevelt Island" to "Manhattan".
@@ -242,6 +243,7 @@ In addition, the research team will also build the Heat Map visualization on con
 By analyzing our real datasets, we found out the number of condom distribution centers that have free male condoms in each borough. This information is stored in the temporary table "Condom_by_Borough". To better visualize the data, the research team created a bar chart addressing this table. As shown in the bar chart below, the Bronx borough has 125 condom distribution centers with free available male condoms. The Brooklyn has 216 of them, and Manhattan has the highest number of condom distribution centers with 244 in the area. The Queens borough has 107 of distribution centers, and the Staten Island has the lowest number of distribution centers with only 10 in the area.
 
 ![Number of Condom Distribution Centers Per Borough](https://user-images.githubusercontent.com/70513470/181414590-e36abd76-9216-485a-bd85-197b1b379f1a.png "(Figure 2. Number of Condom Distribution Centers by Borough)")
+
 (Figure 2. Number of Condom Distribution Centers by Borough)
 
 ---
