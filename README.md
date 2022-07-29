@@ -273,11 +273,15 @@ The following bar chart is used to examine the relationship between the HIV stat
 
 ### Google Platform Geocoding API
 
-* [Heat Map](https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/Condom_Availability_map.html)
+Aside from the data analyzation process, the research team also implemented the Heat Map layer from Google Platform Geocoding API to better visualize the density of the condom distribution centers in the NYC. Also, a Marker Map layer was made to identify the address of each fake patient on an interactive map. Finally, we combined two layers together into one google map html file to observe the distance between the fake patients and the nearest condom distribution centers.
 
-* [Marker Map](https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/fake_patients_loc.html)
+The 3 maps in html format are shown below. Please note that you can only view those maps after you copy the raw content of the html file and paste it into some online html viewers.
 
-* [Combined Hybrid Map](https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/Combined_map.html)
+[Heat Map](https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/Condom_Availability_map.html)
+
+[Marker Map](https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/fake_patients_loc.html)
+
+[Combined Hybrid Map](https://github.com/l404NotFoundl/Effect-of-Free-Male-Contraceptive-Availability-on-the-STDs-Prevalence-in-NYC-Districts/blob/main/Results/Combined_map.html)
 
 ## **Discussion**
 ### Limitation
